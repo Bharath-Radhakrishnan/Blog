@@ -2,9 +2,9 @@
 <div class="container">
   <h1><%=post.name%></h1>
   <p><%=post.content %></p>
-  <!-- <form action="/delete" method="post">
-    <button class="btn btn-danger" type="submit" name="delete" va>Delete Post</button>
-  </form> -->
+  <form action="/delete" method="post">
+    <button class="btn btn-danger" type="submit" name="postName" value="<%=post.name %>">Delete Post</button>
+  </form>
 </div>
 
 <%- include("footer"); %>

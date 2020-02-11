@@ -86,9 +86,14 @@ app.post("/", function(req, res) {
   });
 });
 
-// app.post("/delete",function(req,res){
-//
-// });
+app.post("/delete",function(req,res){
+  const postToDelete=req.body.postName;
+  Post.deleteOne({name:postToDelete},function(err){
+    if(!err){
+      res.redirect("/");
+    }
+  });
+});
 
 
 

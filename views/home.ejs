@@ -1,6 +1,5 @@
 <%- include("header"); %>
 <div class="container">
-  <h1>Home</h1>
     <%postList.forEach(function(post){ %>
     <h2> <%= post.name %> </h2>
     <p> <%= post.content.substring(0,100);%> <a href="/posts/<%=post.name%>"">Read More</a>
